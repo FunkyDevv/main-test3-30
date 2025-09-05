@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Service Assistant</title>
+  <link rel="stylesheet" href="chatbot.css">
+  <style>
+    .case-form { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .case-form input, .case-form textarea { width: 100%; margin-bottom: 10px; padding: 5px; }
+    .case-display { margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; }
+    .case-display h3 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div id="chatbot-container">
+    <div id="chatbot-header">
+      <h2>Customer Service Assistant</h2>
+      <button id="close-btn">×</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div class="case-form">
+      <h3>Create New Case</h3>
+      <input type="text" id="buyer-name" placeholder="Buyer Name" required>
+      <input type="text" id="item" placeholder="Item" required>
+      <textarea id="problem" placeholder="Problem/Issue" required></textarea>
+      <input type="text" id="status" placeholder="Status (default: Open)">
+      <input type="text" id="next-action" placeholder="Next Action (default: Investigate issue)">
+      <button id="create-case-btn">Create Case</button>
+      <div id="message-container" style="display: flex; margin-top: 10px;">
+        <input type="text" id="message-input" placeholder="Type your message..." style="width: 70%; margin-right: 10px;">
+        <button id="send-button" style="width: 20%;">Send</button>
+      </div>
+    </div>
+    <div class="case-display" id="current-case" style="display: none;">
+      <h3>Current Case</h3>
+      <p><strong>Case ID:</strong> <span id="case-id"></span></p>
+      <p><strong>Buyer Name:</strong> <span id="display-buyer-name"></span></p>
+      <p><strong>Item:</strong> <span id="display-item"></span></p>
+      <p><strong>Problem:</strong> <span id="display-problem"></span></p>
+      <p><strong>Status:</strong> <span id="display-status"></span></p>
+      <p><strong>Next Action:</strong> <span id="display-next-action"></span></p>
+    </div>
+  </div>
+  <script src="customer-service.js"></script>
+</body>
+</html>

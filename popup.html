@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ePro AI Chatbot Settings</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 10px;
+      width: 300px;
+      background-color: #f6f2ef;
+      color: #333;
+    }
+    h1 {
+      font-size: 1.2em;
+      color: #f56400;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #f56400;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e45a00;
+    }
+  </style>
+</head>
+<body>
+  <h1>ePro AI Settings</h1>
+  <button id="login-btn">Login with Etsy</button>
+
+  <script>
+    document.getElementById('login-btn').addEventListener('click', () => {
+      // TODO: Trigger Etsy OAuth login flow
+      alert('Login with Etsy clicked. OAuth flow to be implemented.');
+    });
+  </script>
+</body>
+</html>

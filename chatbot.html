@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ePro AI Assistant Chatbox</title>
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+
+  <!-- Chatbot Container -->
+  <div id="chatbot-container" class="chatbot-container" aria-live="polite" role="region" aria-label="ePro AI Assistant Chatbox">
+    
+    <!-- Header -->
+    <header class="chatbot-header">
+      <div class="chatbot-header-left">
+        <div class="epro-logo" aria-hidden="true">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="header-text">
+          <h2>ePro AI</h2>
+          <p>Online • Ready to help</p>
+        </div>
+      </div>
+      <!-- ✅ Proper close button -->
+      <button id="close-btn" class="chatbot-close-btn" title="Close Chat">
+        ✖
+      </button>
+    </header>
+
+    <!-- Chat Messages -->
+    <div id="chat-messages" class="chat-messages" tabindex="0" aria-live="polite" aria-relevant="additions">
+      <div class="welcome-message bot-message">
+        <div class="message-content">
+          <p>Hi there! 👋 I'm your ePro AI Assistant. How can I help you today?</p>
+        </div>
+        <div class="message-time">Just now</div>
+      </div>
+    </div>
+
+    <!-- Chat Form -->
+    <form id="chat-form" class="chat-form" aria-label="Send a message">
+      <div class="chat-form-top">
+        <!-- Image Upload Button -->
+        <label for="image-upload" class="upload-btn" id="upload-btn" title="Upload image">
+          <img src="src/image.svg" alt="Upload" id="upload-icon" />
+        </label>
+        <input type="file" id="image-upload" accept="image/*" hidden />
+
+        <!-- Seller message textbox -->
+        <textarea id="seller-message" placeholder="How can I help you?" aria-label="Buyer message" required></textarea>
+      </div>
+
+      <!-- Chat history -->
+      <textarea id="chat-history" placeholder="Paste chat history (up to 10 messages)" aria-label="Chat history"></textarea>
+
+      <!-- Language + Buyer name -->
+      <div class="chat-form-row">
+        <select id="language-code" aria-label="Select language">
+          <option value="en" selected>English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="zh">Chinese</option>
+        </select>
+        <input type="text" id="buyer-name" placeholder="Buyer name (optional)" aria-label="Buyer name" />
+      </div>
+
+      <!-- ✅ Only orange send button kept -->
+      <button type="submit" class="chat-send-btn" aria-label="Send message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
